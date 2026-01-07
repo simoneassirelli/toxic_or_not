@@ -1,0 +1,74 @@
+# --- Data engineering outputs ---
+toxicity_raw:
+  type: pandas.ParquetDataset
+  filepath: data/01_raw/toxicity_raw.parquet
+  save_args:
+    index: false
+
+# --- Data exploration outputs ---
+
+toxicity_summary:
+  type: json.JSONDataset
+  filepath: data/08_reporting/toxicity_summary.json
+
+toxicity_label_distribution:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/toxicity_label_distribution.csv
+  save_args:
+    index: false
+
+toxicity_with_length_features:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/toxicity_with_length_features.parquet
+  save_args:
+    index: false
+
+# --- Modeling outputs ---
+
+X_train:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/X_train.parquet
+  save_args: { index: false }
+
+X_val:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/X_val.parquet
+  save_args: { index: false }
+
+X_test:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/X_test.parquet
+  save_args: { index: false }
+
+y_train:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/y_train.parquet
+  save_args: { index: false }
+
+y_val:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/y_val.parquet
+  save_args: { index: false }
+
+y_test:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/y_test.parquet
+  save_args: { index: false }
+
+toxicity_model:
+  type: pickle.PickleDataset
+  filepath: data/06_models/toxicity_model.pkl
+
+toxicity_metrics:
+  type: json.JSONDataset
+  filepath: data/08_reporting/toxicity_metrics.json
+
+# --- Inference outputs ---
+toxicity_threshold:
+  type: json.JSONDataset
+  filepath: data/06_models/toxicity_threshold.json
+
+toxicity_model_card:
+  type: json.JSONDataset
+  filepath: data/06_models/toxicity_model_card.json
+

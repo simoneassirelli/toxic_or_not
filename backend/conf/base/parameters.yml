@@ -1,0 +1,17 @@
+data_dir: data/01_raw/jigsaw_toxic_comment
+max_rows: 50000   # set to null to use full dataset
+
+split:
+  test_size: 0.15
+  val_size: 0.15
+  random_state: 42
+  stratify: true
+
+tfidf:
+  max_features: 50000
+  ngram_range: [1, 2]
+  min_df: 2
+
+logreg:
+  C: 2.0
+  max_iter: 1000

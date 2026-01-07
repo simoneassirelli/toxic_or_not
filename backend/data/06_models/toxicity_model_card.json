@@ -1,0 +1,35 @@
+{
+  "model_type": "sklearn_pipeline_tfidf_logreg",
+  "created_at_utc": "2026-01-05T11:05:41.741080+00:00",
+  "metrics": {
+    "val": {
+      "accuracy": 0.9422743634182109,
+      "precision": 0.6931818181818182,
+      "recall": 0.7891332470892626,
+      "f1": 0.7380520266182699,
+      "roc_auc": 0.957215256124893
+    },
+    "test": {
+      "accuracy": 0.9372,
+      "precision": 0.6579497907949791,
+      "recall": 0.8137128072445019,
+      "f1": 0.7275882012724117,
+      "roc_auc": 0.9623265206671344
+    }
+  },
+  "threshold": {
+    "threshold": 0.5499999999999999,
+    "f1": 0.7476038338658147,
+    "computed_at_utc": "2026-01-05T11:05:41.704668+00:00",
+    "val_positive_rate": 0.10305292627649647
+  },
+  "inputs": {
+    "field": "text",
+    "type": "string"
+  },
+  "outputs": {
+    "field": "toxicity_score",
+    "type": "float",
+    "label_thresholded": true
+  }
+}

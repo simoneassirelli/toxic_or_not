@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toxic or Not</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Toxic or Not</h1>
+        <p>Type a comment and the model will estimate toxicity.</p>
+
+        <label class="label" for="text">Comment</label>
+        <textarea id="text" rows="6" placeholder="Type something..."></textarea>
+
+        <div class="row">
+            <label class="label" for="apiUrl">API URL</label>
+            <input id="apiUrl" type="text" placeholder="https://YOUR-RENDER-SERVICE.onrender.com" />
+        </div>
+
+        <button id="btn">Predict</button>
+
+        <section id="result" class="result hidden">
+            <h2>Result</h2>
+            <div id="status" class="status"></div>
+            <div class="kv">
+                <div>Score:</div>
+                <div id="score"></div>
+                <div>Threshold:</div>
+                <div id="thresh"></div>
+            </div>
+        </section>
+
+        <footer>
+            <small>Tip: set the API URL once; it will be saved in your browser.</small>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

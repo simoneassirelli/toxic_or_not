@@ -1,0 +1,7 @@
+[tool.kedro]
+package_name = "toxic_or_not"
+project_name = "toxic-or-not"
+kedro_init_version = "0.19.6"
+source_dir = "src"
+tools = []
+example_pipeline = "False"
